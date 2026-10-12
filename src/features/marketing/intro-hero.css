@@ -1,0 +1,24 @@
+.wa-hero-word { display: inline-block; }
+.ws-agent-entry[data-intro-waiting="true"] .wa-hero-word,
+.ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait > .ws-wasla-agent,
+.ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait-heading,
+.ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait-caption { opacity: 0; }
+.ws-arabic .ws-agent-portrait-heading,
+.ws-arabic .ws-agent-portrait-caption > span { font-size: 12px; line-height: 1.8; color: var(--wa-muted); }
+.ws-agent-portrait-heading > span { min-inline-size: 0; overflow-wrap: normal; }
+.ws-agent-portrait-caption > span { min-inline-size: 0; text-wrap: pretty; overflow-wrap: normal; }
+@media(max-width:700px) {
+  .ws-arabic .ws-agent-portrait-caption { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; align-items: end; }
+  .ws-arabic .ws-agent-portrait-caption > span { max-inline-size: 100%; }
+  .ws-arabic .ws-agent-portrait-caption h2 { font-size: 20px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ws-agent-entry[data-intro-waiting="true"] .wa-hero-word,
+  .ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait > .ws-wasla-agent,
+  .ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait-heading,
+  .ws-agent-entry[data-intro-waiting="true"] .ws-agent-portrait-caption { opacity: 1; }
+}
+
+/* Cache the moving diamond separately; its card supplies the soft depth. */
+.ws-arabic .ws-agent-portrait > .ws-wasla-agent { filter: none; will-change: transform; }
+.ws-agent-entry[data-intro-waiting="true"] .ws-wasla-agent * { animation-play-state: paused !important; }

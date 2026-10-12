@@ -1,0 +1,89 @@
+/* Taste Skill: variance 6, motion 3, density 3. Existing agent artwork is preserved. */
+.ws-agent-entry{background:var(--ws-canvas)}
+.ws-agent-entry>.ws-marketing-container{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);align-items:center;gap:clamp(36px,5vw,80px);padding-block:48px 64px;min-height:650px}
+.ws-agent-eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--ws-brand)}
+.ws-agent-entry-copy h1{font-family:var(--ws-font-display);font-size:clamp(46px,5.05vw,74px);font-weight:600;line-height:1.1;letter-spacing:-.055em;margin:24px 0;white-space:nowrap}
+.ws-agent-entry-copy h1 em{color:var(--ws-brand);font-style:normal}
+.ws-agent-entry-copy>p{font-size:17px;line-height:1.8;color:var(--ws-ink-soft);max-width:440px;margin:0}
+.ws-agent-entry-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:32px}
+.ws-agent-entry .ws-landing-primary,.ws-agent-entry .ws-landing-secondary,.ws-agent-final .ws-landing-primary{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:0 21px;font-size:14px;border-radius:var(--ws-radius-sm);white-space:nowrap;transition: transform 200ms ease-out, opacity 200ms ease-out}
+.ws-agent-entry .ws-landing-primary{background:var(--ws-brand);color:var(--ws-brand-foreground);border:1px solid var(--ws-brand)}
+@media (hover: hover) {
+.ws-agent-entry .ws-landing-primary:hover{background:var(--ws-brand-hover)}}
+.ws-agent-entry .ws-landing-secondary{background:var(--ws-surface);color:var(--ws-ink);border:1px solid var(--ws-border-strong)}
+@media (hover: hover) {
+.ws-agent-entry .ws-landing-secondary:hover{background:var(--ws-surface-subtle)}}
+.ws-agent-entry-actions>a:active,.ws-agent-entry-actions>button:active{transform:scale(.98)}
+.ws-agent-portrait{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;min-height:530px;padding:27px 32px 32px;border-radius:var(--ws-radius-lg);background:#E8EFE7;overflow:hidden}
+.ws-agent-portrait-heading{display:flex;width:100%;justify-content:space-between;gap:16px;align-items:center;font-size:12px;color:var(--ws-ink-soft)}
+.ws-portrait-wordmark{font-size:20px;font-weight:700;letter-spacing:-.06em;color:var(--ws-ink)}
+.ws-agent-portrait>.ws-wasla-agent{--agent-size:clamp(270px,28vw,380px);margin:-4px auto -12px;filter:drop-shadow(0 24px 24px rgba(23,44,36,.10))}
+.ws-agent-portrait-caption{width:100%;display:flex;justify-content:space-between;align-items:end;gap:20px}
+.ws-agent-portrait-caption h2{font-size:25px;line-height:1.3;letter-spacing:-.035em;font-weight:600;margin:0}
+.ws-agent-portrait-caption>span{font-size:12px;line-height:1.8;color:var(--ws-ink-soft)}
+.ws-agent-workflow{padding-block:72px;scroll-margin-top:84px;border-top:1px solid var(--ws-border)}
+.ws-agent-workflow-heading{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-bottom:28px}
+.ws-agent-workflow h2,.ws-agent-final h2{font-size:clamp(27px,3vw,39px);font-weight:600;letter-spacing:-.045em;line-height:1.25;margin:0}
+.ws-agent-workflow-heading>div:last-child{display:flex;align-items:center;gap:18px;font-size:13px}
+.ws-agent-workflow-heading button{display:flex;align-items:center;gap:8px;color:var(--ws-ink);border:1px solid var(--ws-border-strong);border-radius:var(--ws-radius-sm);min-height:44px;padding:0 15px;background:var(--ws-surface)}
+.ws-agent-workflow-heading a{color:var(--ws-brand);min-height:44px;display:inline-flex;align-items:center}
+.ws-agent-workflow-layout{background:var(--ws-surface);border:1px solid var(--ws-border);border-radius:var(--ws-radius-lg);overflow:hidden}
+.ws-agent-workflow-nav{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));padding:8px;gap:5px;border-bottom:1px solid var(--ws-border)}
+.ws-agent-workflow-nav button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:52px;color:var(--ws-ink-soft);font-size:13px;border:0;border-radius:10px;background:transparent;transition:none}
+@media (hover: hover) {
+.ws-agent-workflow-nav button:hover{background:var(--ws-surface-subtle)}}
+.ws-agent-workflow-nav button>span{font-size:11px;font-family:var(--ws-type-mono)}
+.ws-agent-workflow-nav button.is-active{color:var(--ws-brand);background:var(--ws-brand-tint);font-weight:700}
+.ws-agent-workflow-panel{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.8fr);align-items:center;gap:64px;padding:42px 48px;min-height:285px}
+.ws-agent-workflow-text>span{color:var(--ws-brand);font-size:12px;font-weight:600}
+.ws-agent-workflow-text h3{font-size:clamp(24px,2.3vw,32px);font-weight:600;line-height:1.35;letter-spacing:-.04em;margin:16px 0}
+.ws-agent-workflow-text p{color:var(--ws-ink-soft);font-size:15px;line-height:1.8;margin:0;max-width:480px}
+.ws-agent-workflow-card{display:grid;gap:17px;padding:27px;background:var(--ws-brand-tint);border-radius:var(--ws-radius)}
+.ws-agent-workflow-card>svg{color:var(--ws-brand)}
+.ws-agent-workflow-card>div{display:flex;align-items:center;gap:10px;font-size:13px;line-height:1.6}
+.ws-agent-workflow-card>div svg{color:var(--ws-brand);flex:none}
+.ws-agent-workflow-card>a{color:var(--ws-brand);font-size:13px;font-weight:700;min-height:44px;display:flex;align-items:center;border-top:1px solid var(--ws-brand-border);padding-top:10px;margin-top:3px}
+.ws-agent-reassurance{padding-block:0 48px}
+.ws-agent-trust{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:48px;padding:40px 0 48px;border-top:1px solid var(--ws-border)}
+.ws-agent-trust svg{color:var(--ws-brand)}
+.ws-agent-trust h3{font-size:17px;font-weight:600;letter-spacing:-.025em;margin:18px 0 10px}
+.ws-agent-trust p{font-size:14px;line-height:1.85;color:var(--ws-ink-soft);margin:0;max-width:320px}
+.ws-agent-details{border-top:1px solid var(--ws-border)}
+.ws-agent-details>details{border-bottom:1px solid var(--ws-border)}
+.ws-agent-details>details>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:24px 0;font-size:17px;font-weight:600;cursor:pointer}
+.ws-agent-details summary::-webkit-details-marker{display:none}
+.ws-agent-details>details>summary>svg{transition: transform 200ms ease-out, opacity 200ms ease-out}
+.ws-agent-details>details[open]>summary>svg{transform:rotate(180deg)}
+.ws-agent-details .ws-marketing-container{width:100%}
+.ws-agent-details .ws-pricing-section,.ws-agent-details .ws-faq-section{background:transparent;padding:24px 0 38px}
+.ws-agent-final{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:48px 0 8px}
+.ws-agent-final .ws-landing-primary{background:var(--ws-brand);color:var(--ws-brand-foreground)}
+@media (hover: hover) {
+.ws-agent-final .ws-landing-primary:hover{background:var(--ws-brand-hover)}}
+.ws-marketing-nav{height:72px;background:color-mix(in srgb,var(--ws-canvas) 96%,transparent)}
+.ws-marketing-nav-action>a{min-height:44px;border-radius:var(--ws-radius-sm)}
+.ws-marketing-menu{min-height:44px;min-width:44px}
+.ws-marketing-footer{border-top:1px solid var(--ws-border)}
+.ws-agent-workflow-text,.ws-agent-workflow-card{animation:ws-scene-enter var(--ws-medium) var(--ws-ease) both}
+@keyframes ws-scene-enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+#pricing,#faq{scroll-margin-top:84px}
+.ws-account-access{max-width:1080px;margin:48px auto;padding:0 32px 48px}
+.ws-account-identity{display:flex;justify-content:space-between;align-items:center;margin-bottom:32px}
+.ws-access-layout{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ws-access-story{display:flex;flex-direction:column;align-items:center;text-align:center;background:#E8EFE7;border-radius:var(--ws-radius-lg);padding:34px;min-height:520px;justify-content:center}
+.ws-access-story h2{font-size:30px;letter-spacing:-.045em;line-height:1.3;margin:22px 0 12px;max-width:300px}
+.ws-access-story p{font-size:14px;color:var(--ws-ink-soft);line-height:1.8;max-width:290px;margin:0}
+.ws-access-story>.ws-wasla-agent{--agent-size:250px}
+.ws-access-form .ws-page-header{margin-bottom:26px}
+.ws-access-form .ws-page-header h1{font-size:32px}
+.ws-access-form .ws-page-header p{font-size:15px;line-height:1.8;max-width:380px}
+.ws-access-form .ws-profile-section{padding:28px}
+.ws-account-access .ws-input{min-height:48px;font-size:16px}
+.ws-account-access .ws-button{min-height:48px}
+.ws-agent-entry a:focus-visible,.ws-agent-entry button:focus-visible,.ws-agent-workflow button:focus-visible,.ws-agent-details summary:focus-visible{outline:2px solid var(--ws-brand);outline-offset:4px}
+@media(max-width:1050px){.ws-agent-entry-copy h1{font-size:clamp(40px,5.2vw,55px)}.ws-agent-entry>.ws-marketing-container{gap:32px;min-height:600px}.ws-agent-portrait{min-height:470px;padding:24px}.ws-agent-portrait>.ws-wasla-agent{--agent-size:300px}.ws-agent-portrait-caption h2{font-size:22px}.ws-agent-portrait-caption>span{font-size:11px}.ws-agent-entry-actions{gap:9px}.ws-agent-entry .ws-landing-primary,.ws-agent-entry .ws-landing-secondary{padding-inline:15px;font-size:13px}.ws-access-layout{gap:32px}}
+@media(max-width:767px){.ws-marketing-container{width:calc(100% - 36px)}.ws-agent-entry>.ws-marketing-container{grid-template-columns:1fr;min-height:0;gap:36px;padding-block:40px 44px}.ws-agent-entry-copy h1{font-size:clamp(39px,8.6vw,61px);margin:20px 0}.ws-agent-entry-copy>p{font-size:16px;max-width:440px}.ws-agent-entry-actions{margin-top:26px}.ws-agent-portrait{min-height:400px;padding:24px}.ws-agent-portrait>.ws-wasla-agent{--agent-size:270px}.ws-agent-portrait-caption h2{font-size:23px}.ws-agent-workflow{padding-block:44px}.ws-agent-workflow-heading{align-items:start;flex-direction:column;gap:16px}.ws-agent-workflow-nav{grid-template-columns:repeat(3,minmax(0,1fr))}.ws-agent-workflow-nav button{min-height:46px}.ws-agent-workflow-panel{grid-template-columns:1fr;padding:26px 22px;gap:24px;min-height:0}.ws-agent-trust{grid-template-columns:1fr;gap:26px;padding:34px 0}.ws-agent-trust>div{display:grid;grid-template-columns:26px 1fr;gap:0 14px}.ws-agent-trust h3{margin:0 0 8px}.ws-agent-trust p{grid-column:2;max-width:none}.ws-agent-final{align-items:start;flex-direction:column;gap:22px;padding-top:34px}.ws-agent-final h2{font-size:30px}.ws-access-layout{grid-template-columns:1fr}.ws-access-story{display:none}.ws-account-access{max-width:520px;margin-top:28px;padding:0 20px 36px}.ws-account-identity{margin-bottom:38px}.ws-access-form .ws-profile-section{padding:23px}.ws-account-access .ws-page-header h1{font-size:30px}}
+@media(max-width:390px){.ws-agent-entry-actions{align-items:stretch;flex-direction:column}.ws-agent-entry .ws-landing-primary,.ws-agent-entry .ws-landing-secondary{width:100%;font-size:14px}.ws-agent-portrait{min-height:360px;padding:20px}.ws-agent-portrait>.ws-wasla-agent{--agent-size:240px}.ws-agent-portrait-caption h2{font-size:21px}.ws-agent-portrait-caption>span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.ws-agent-workflow-text,.ws-agent-workflow-card{animation:none}.ws-agent-entry-actions>a:active,.ws-agent-entry-actions>button:active{transform:none}}
+
+@media(max-width:640px){.ws-marketing-nav{height:64px}}

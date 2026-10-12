@@ -1,0 +1,34 @@
+.ws-activity-item { display:flex; align-items:flex-start; gap:12px; padding:16px 0; border-bottom:1px solid var(--ws-border); min-width:0; position:relative; }
+.ws-activity-item:last-child { border-bottom:0; }
+.ws-activity-icon { display:grid; place-items:center; flex:none; width:29px; height:29px; border:1px solid var(--ws-border); border-radius:8px; color:var(--ws-ink-soft); background:var(--ws-surface); }
+.ws-activity-icon.is-attention { color:var(--ws-warning); background:var(--ws-warning-tint); border-color:transparent; }
+.ws-activity-icon.is-submission { color:var(--ws-success); background:var(--ws-success-tint); border-color:transparent; }
+.ws-activity-icon.is-preparation { color:var(--ws-brand); background:var(--ws-brand-tint); border-color:transparent; }
+.ws-activity-icon.is-system { color:var(--ws-ink-faint); background:var(--ws-surface-subtle); border-color:transparent; }
+.ws-activity-copy { display:flex; flex:1; flex-direction:column; gap:4px; min-width:0; }
+.ws-activity-title { display:flex; align-items:center; flex-wrap:wrap; gap:7px; }
+.ws-activity-title strong { color:var(--ws-ink); font-size:13px; font-weight:600; }
+.ws-activity-title em { color:var(--ws-ink-faint); font-size:9px; font-style:normal; line-height:1.7; }
+.is-attention .ws-activity-title em { color:var(--ws-warning); background:var(--ws-warning-tint); padding:0 5px; border-radius:4px; }
+.ws-activity-copy small { color:var(--ws-ink-soft); font-size:11px; line-height:1.6; }
+.ws-activity-copy time { color:var(--ws-ink-faint); font-size:10px; margin-top:1px; }
+.ws-activity-open { margin-top:5px; color:var(--ws-ink-faint); flex:none; }
+@media (hover: hover) {
+a.ws-activity-item:hover .ws-activity-title strong { color:var(--ws-brand); }}
+.ws-activity-item.is-timeline { padding-left:21px; border-bottom:0; }
+.ws-activity-item.is-timeline:not(:last-child)::before { content:""; position:absolute; left:8px; top:23px; bottom:-9px; width:1px; background:var(--ws-border); }
+.ws-activity-item.is-timeline .ws-activity-icon { position:absolute; left:0; top:19px; width:17px; height:17px; border:2px solid var(--ws-surface); border-radius:50%; z-index:1; }
+.ws-activity-item.is-timeline .ws-activity-icon svg { display:none; }
+.ws-activity-item.is-timeline .ws-activity-icon.is-attention { background:var(--ws-warning); }
+.ws-activity-item.is-timeline .ws-activity-icon.is-submission { background:var(--ws-success); }
+.ws-activity-item.is-timeline .ws-activity-icon.is-decision { background:var(--ws-agent); }
+.ws-activity-now { display:flex; align-items:center; gap:12px; padding:15px; border:1px solid var(--ws-border); border-radius:var(--ws-radius-sm); background:var(--ws-surface-subtle); margin-bottom:16px; }
+.ws-activity-now>span { display:grid; place-items:center; width:33px; height:33px; border:1px solid var(--ws-border); border-radius:9px; background:var(--ws-surface); color:var(--ws-agent); }
+.ws-activity-now>div { flex:1; min-width:0; }.ws-activity-now small { display:block; font-size:9px; letter-spacing:.1em; color:var(--ws-ink-faint); margin-bottom:3px; }.ws-activity-now strong { font-size:12px; font-weight:600; }.ws-activity-now p { margin:3px 0 0; color:var(--ws-ink-soft); font-size:11px; }
+.ws-activity-now>i { width:6px; height:6px; background:var(--ws-ink-faint); border-radius:50%; }.ws-activity-now.is-working>i { background:var(--ws-agent); animation:ws-live-task 1.7s ease-out infinite; }
+.ws-activity-filters { display:flex; gap:5px; padding-bottom:12px; border-bottom:1px solid var(--ws-border); overflow:auto; }
+.ws-activity-filters button { padding:6px 10px; border:1px solid transparent; border-radius:6px; font-size:11px; color:var(--ws-ink-soft); background:transparent; white-space:nowrap; }.ws-activity-filters button[aria-pressed=true] { background:var(--ws-surface-subtle); color:var(--ws-ink); border-color:var(--ws-border); }
+@media (hover: hover) {.ws-activity-filters button:hover { background:var(--ws-surface-subtle); }}
+.ws-activity-empty { padding:25px 0; color:var(--ws-ink-soft); font-size:12px; }.ws-agent-feed.is-compact .ws-activity-title em { display:none; }
+@keyframes ws-live-task { 50% { opacity:.45; } }
+@media(prefers-reduced-motion:reduce) { .ws-activity-now.is-working>i { animation:none; } }

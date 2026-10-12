@@ -1,0 +1,13 @@
+.ws-landing { overflow:clip;background:var(--ws-canvas);color:var(--ws-ink); }
+.ws-marketing-container { width:min(100% - 80px,1240px);margin:0 auto; }
+.ws-marketing-nav { height:80px;border-bottom:1px solid var(--ws-border);background:var(--ws-canvas);position:sticky;top:0;z-index:40; }
+.ws-marketing-nav>.ws-marketing-container { height:100%;display:flex;align-items:center;justify-content:space-between;gap:30px; }
+.ws-marketing-links { display:flex;align-items:center;gap:30px;margin-left:auto; }
+.ws-marketing-links a { color:var(--ws-ink-soft);font-size:14px;font-weight:500;transition: none; }.ws-marketing-links a[aria-current=location] { color:var(--ws-brand); }
+@media (hover: hover) {
+.ws-marketing-links a:hover{ color:var(--ws-brand); }}
+.ws-marketing-nav-action { display:flex;align-items:center;gap:12px; }
+.ws-marketing-nav-action>a { display:flex;align-items:center;border:1px solid var(--ws-brand);background:var(--ws-brand);color:var(--ws-brand-foreground);padding:11px 16px;border-radius:var(--ws-radius-sm);font-size:14px;font-weight:650; }
+@media (hover: hover) {
+.ws-marketing-nav-action>a:hover { background:var(--ws-brand-hover); }}
+.ws-marketing-menu { display:none;border:0;background:transparent;color:var(--ws-ink);width:40px;height:40px; }

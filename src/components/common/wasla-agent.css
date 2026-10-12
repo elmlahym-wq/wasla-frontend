@@ -1,0 +1,34 @@
+.ws-wasla-agent {
+  --agent-size:42px; --agent-yellow:var(--ws-brand); --agent-charcoal:var(--ws-ink); --agent-ivory:var(--ws-ink); --agent-flow:2.1s;
+  display:inline-grid;place-items:center;position:relative;width:var(--agent-size);height:var(--agent-size);flex:none;vertical-align:middle;
+  color:var(--agent-yellow);background:var(--ws-surface-subtle);border:1px solid var(--ws-border);border-radius:28%;overflow:hidden;isolation:isolate;
+}
+.ws-wasla-agent--hero { --agent-size:clamp(240px,25vw,320px);border:0;background:transparent;overflow:visible; }
+.ws-wasla-agent--panel { --agent-size:78px; }
+.ws-agent-mark { display:block;width:88%;height:88%; }
+.ws-agent-body,.ws-agent-core { transition: opacity .2s ease; }
+.ws-wasla-agent img { display:block;width:100%;height:100%;object-fit:contain;grid-area:1/1; }
+.ws-agent-core { fill:var(--agent-ivory);opacity:.48; }
+.ws-agent-satin-focus { grid-area:1/1;position:absolute;left:45.5%;top:45.5%;width:9%;height:9%;border-radius:50%;background:var(--agent-ivory);filter:blur(10px);opacity:.1;animation:ws-agent-ready 5s ease-out infinite; }
+.ws-agent-signals { stroke:var(--agent-ivory);opacity:0; }
+.ws-agent-focus { fill:var(--agent-ivory);opacity:0; }
+.ws-agent-signals path { stroke-dashoffset:16;animation:ws-agent-inward var(--agent-flow) cubic-bezier(.42,0,.24,1) infinite;animation-play-state:paused; }
+.ws-wasla-agent:is([data-state="understanding"],[data-state="scanning"],[data-state="evaluating"],[data-state="preparing"],[data-state="submitting"]) .ws-agent-signals { opacity:.74; }
+.ws-wasla-agent:is([data-state="understanding"],[data-state="scanning"],[data-state="evaluating"],[data-state="preparing"],[data-state="submitting"]) .ws-agent-signals path { animation-play-state:running; }
+.ws-wasla-agent:is([data-state="understanding"],[data-state="scanning"],[data-state="evaluating"],[data-state="preparing"],[data-state="submitting"]) .ws-agent-focus { animation:ws-agent-focus var(--agent-flow) ease-out infinite; }
+.ws-wasla-agent[data-state="understanding"] { --agent-flow:2.6s; }
+.ws-wasla-agent[data-state="evaluating"] { --agent-flow:2.8s; }
+.ws-wasla-agent[data-state="preparing"] { --agent-flow:2.35s; }
+.ws-wasla-agent[data-state="submitting"] { --agent-flow:1.85s; }
+.ws-wasla-agent[data-state="ready"] .ws-agent-focus { animation:ws-agent-ready 5s ease-out infinite; }
+.ws-wasla-agent[data-state="ready"] .ws-agent-satin { animation:ws-agent-idle 5s ease-out infinite; }
+.ws-wasla-agent[data-state="needs-input"] .ws-agent-focus { animation:ws-agent-input 4s ease-out infinite; }
+.ws-wasla-agent[data-state="paused"] .ws-agent-body,.ws-wasla-agent[data-state="paused"] .ws-agent-core { opacity:.68; }
+.ws-wasla-agent[data-state="confirmed-completion"] .ws-agent-focus { opacity:.78; }
+.ws-wasla-agent[data-visible="false"] * { animation-play-state:paused!important; }
+@keyframes ws-agent-inward { 0%{stroke-dashoffset:16;opacity:0}14%{opacity:.85}76%{opacity:.85}100%{stroke-dashoffset:-100;opacity:0} }
+@keyframes ws-agent-focus { 0%,58%,100%{opacity:.05}78%{opacity:.5} }
+@keyframes ws-agent-ready { 0%,100%{opacity:.03}50%{opacity:.18} }
+@keyframes ws-agent-idle { 0%,100%{transform:scale(1)}50%{transform:scale(1.007)} }
+@keyframes ws-agent-input { 0%,100%{opacity:.18}50%{opacity:.65} }
+@media(prefers-reduced-motion:reduce){.ws-wasla-agent *{animation:none!important;transition:none}.ws-agent-satin{transform:none!important}.ws-agent-signals{display:none!important}.ws-wasla-agent[data-state="needs-input"] .ws-agent-focus{opacity:.45}}

@@ -1,0 +1,74 @@
+@media(max-width:1100px) {
+  .ws-feature-grid,.ws-execution-grid { gap:42px; }
+  .ws-pack-object { width:155px; height:155px; right:-30px; }
+  .ws-proof-grid { gap:40px; }
+}
+@media(max-width:850px) {
+  .ws-marketing-container { width:min(100% - 40px,720px); }
+  .ws-marketing-links { gap:15px; }
+  .ws-marketing-links a { font-size:14px; }
+  .ws-trust-strip>.ws-marketing-container { gap:24px; justify-content:space-between; }
+  .ws-workflow-grid { gap:8px; }
+  .ws-workflow-grid>button { padding:15px 11px; min-height:150px; }
+  .ws-workflow-grid h3 { font-size:13px; }
+  .ws-workflow-grid p { font-size:10px; }
+  .ws-feature-grid,.ws-pack-feature .ws-feature-grid { grid-template-columns:1fr; gap:35px; }
+  .ws-feature-copy { max-width:630px; }
+  .ws-pack-feature .ws-feature-copy { grid-row:1; }
+  .ws-feature-visual { min-height:410px; }
+  .ws-execution-grid,.ws-proof-grid,.ws-faq-grid { grid-template-columns:1fr; gap:30px; }
+  .ws-execution-grid>div:first-child { max-width:570px; }
+  .ws-pricing-grid { gap:10px; }
+  .ws-price-card { padding:21px 18px; }
+}
+@media(max-width:640px) {
+  .ws-marketing-container { width:calc(100% - 34px); }
+  .ws-marketing-nav { height:64px; }
+  .ws-marketing-nav>.ws-marketing-container { gap:12px; }
+  .ws-marketing-nav-action { gap:8px; }
+  .ws-marketing-links { display:none; position:absolute; left:0; right:0; top:64px; margin:0; background:var(--ws-surface); border-bottom:1px solid var(--ws-border); padding:16px 20px; box-shadow:0 10px 18px rgba(20,30,50,.05); }
+  .ws-marketing-links.is-open { display:grid; gap:17px; }
+  .ws-marketing-links a { display:block;font-size:14px;min-height:44px;padding-block:8px; }
+  .ws-marketing-menu { display:grid; place-items:center; }
+  .ws-marketing-nav-action>a { padding:8px 10px;min-height:44px; }
+  .ws-trust-strip>.ws-marketing-container { min-height:0; padding:18px 0; flex-wrap:wrap; justify-content:center; gap:12px 21px; }
+  .ws-trust-strip span { font-size:10px; }
+  .ws-workflow-section,.ws-feature-section,.ws-control-section,.ws-product-proof,.ws-pricing-section,.ws-faq-section { padding:70px 0; }
+  .ws-workflow-grid { grid-template-columns:repeat(2,1fr); gap:10px; margin-top:29px; }
+  .ws-workflow-grid>button { min-height:135px; padding:16px; }
+  .ws-workflow-grid>button:last-child { grid-column:span 2; min-height:110px; }
+  .ws-workflow-arrow { display:none; }
+  .ws-workflow-result { align-items:flex-start; }
+  .ws-workflow-progress { display:none; }
+  .ws-before-after { grid-template-columns:1fr; gap:10px; }
+  .ws-before-after>svg { transform:rotate(90deg); }
+  .ws-feature-copy h2 { font-size:36px; }
+  .ws-feature-visual { min-height:330px; }
+  .ws-autopilot-preview { width:90%; padding:15px; }
+  .ws-autopilot-preview h3 { font-size:15px; }
+  .ws-autopilot-funnel { gap:5px; }
+  .ws-autopilot-funnel strong { font-size:8px; }
+  .ws-preview-queue em { display:none; }
+  .ws-pack-object { width:125px; height:125px; right:-37px; bottom:-25px; }
+  .ws-pack-preview { width:87%; transform:rotate(2deg) translateX(-9px); }
+  .ws-execution-section { padding:70px 0; }
+  .ws-control-grid,.ws-pricing-grid { grid-template-columns:1fr; gap:10px; margin-top:27px; }
+  .ws-control-grid>div { padding:19px; }
+  .ws-control-grid h3 { margin:10px 0 4px; }
+  .ws-price-card { padding:25px; }
+  .ws-price-head p { min-height:0; }
+  .ws-final-cta { padding:65px 0; }
+  .ws-marketing-footer>.ws-marketing-container { flex-wrap:wrap; }
+  .ws-marketing-footer>div>div:last-child { width:100%; margin:10px 0 0; }
+  .ws-tour-stage { grid-template-columns:1fr; gap:6px; }
+  .ws-tour-stage>div { padding:5px; }
+  .ws-tour-stage h3 { font-size:24px; }
+  .ws-tour-stage .ws-tour-screen { min-height:210px; padding:15px; }
+  .ws-tour-footer span { display:none; }
+  .ws-tour-footer { justify-content:flex-end; }
+}
+@media(max-width:400px) {
+  .ws-pack-object { display:none; }
+  .ws-preview-head small { display:none; }
+}
+@media(max-width:360px) { .ws-marketing-nav .ws-brand-name { display:none; } }

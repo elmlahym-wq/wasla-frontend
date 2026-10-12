@@ -1,0 +1,156 @@
+/* Stage 1: visual tokens only. Existing application contracts stay intact. */
+@font-face {
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/geist-variable.woff2") format("woff2");
+}
+
+:root.ws-arabic {
+  --wa-ivory: #F5F2EB;
+  --wa-paper: #FFFCF6;
+  --wa-gold: #F2CC60;
+  --wa-intro-gold: #E0B23C;
+  --wa-intro-glow: rgb(224 178 60 / 18%);
+  --wa-gold-hover: #E5BC48;
+  --wa-bronze: #795516;
+  --wa-ink: #29251F;
+  --wa-ink-on-gold: #29251F;
+  --wa-muted: #655F54;
+  --wa-faint: #70695D;
+  --wa-line: #DDD5C6;
+  --wa-line-strong: #B4A793;
+  --wa-subtle: #ECE6DA;
+  --wa-hover: #E5DDCE;
+  --wa-gold-tint: #FBEDC5;
+  --wa-success: #27664B;
+  --wa-success-tint: #E5EFE7;
+  --wa-error: #A73830;
+  --wa-error-tint: #FAE9E4;
+  --wa-processing: #57524A;
+  --wa-gold-glow: rgb(242 204 96 / 18%);
+  --wa-shadow-color: rgb(41 37 31 / 8%);
+  --wa-radius-sm: 0.625rem;
+  --wa-radius-md: 1.125rem;
+  --wa-radius-lg: 1.75rem;
+  --wa-shadow-sm: 0 4px 16px var(--wa-shadow-color);
+  --wa-shadow-md: 0 16px 48px var(--wa-shadow-color);
+  --wa-shadow-lg: 0 28px 80px var(--wa-shadow-color);
+  --wa-space-1: 0.25rem;
+  --wa-space-2: 0.5rem;
+  --wa-space-3: 0.75rem;
+  --wa-space-4: 1rem;
+  --wa-space-6: 1.5rem;
+  --wa-space-8: 2rem;
+  --wa-space-12: 3rem;
+  --wa-space-16: 4rem;
+  --wa-space-24: 6rem;
+  --wa-font-body: "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --wa-font-heading: "Readex Pro", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --wa-font-latin: "Geist", system-ui, sans-serif;
+  --wa-text-body: clamp(1.0625rem, 1rem + 0.2vw, 1.125rem);
+  --wa-text-display: clamp(2.75rem, 2rem + 3.5vw, 6rem);
+  --wa-text-heading: clamp(2rem, 1.5rem + 2vw, 3.75rem);
+  --wa-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --wa-duration-fast: 180ms;
+  --wa-duration-reveal: 650ms;
+  color-scheme: light;
+
+  /* Map the existing component vocabulary to the new visual system. */
+  --ws-font-ui: var(--wa-font-body);
+  --ws-font-display: var(--wa-font-heading);
+  --ws-type-mono: var(--wa-font-latin);
+  --ws-type-body: var(--wa-text-body);
+  --ws-canvas: var(--wa-ivory);
+  --ws-surface: var(--wa-paper);
+  --ws-surface-raised: var(--wa-paper);
+  --ws-surface-subtle: var(--wa-subtle);
+  --ws-surface-hover: var(--wa-hover);
+  --ws-border: var(--wa-line);
+  --ws-border-strong: var(--wa-line-strong);
+  --ws-ink: var(--wa-ink);
+  --ws-ink-soft: var(--wa-muted);
+  --ws-ink-faint: var(--wa-faint);
+  --ws-brand: var(--wa-bronze);
+  --ws-brand-hover: var(--wa-ink);
+  --ws-brand-foreground: var(--wa-paper);
+  --ws-brand-tint: var(--wa-gold-tint);
+  --ws-brand-border: var(--wa-line-strong);
+  --ws-brand-glow: var(--wa-gold-glow);
+  --ws-agent: var(--wa-bronze);
+  --ws-agent-tint: var(--wa-gold-tint);
+  --ws-success: var(--wa-success);
+  --ws-success-tint: var(--wa-success-tint);
+  --ws-warning: var(--wa-bronze);
+  --ws-warning-tint: var(--wa-gold-tint);
+  --ws-danger: var(--wa-error);
+  --ws-danger-tint: var(--wa-error-tint);
+  --ws-processing: var(--wa-processing);
+  --ws-processing-tint: var(--wa-subtle);
+  --ws-stage: var(--wa-subtle);
+  --ws-stage-deep: var(--wa-ivory);
+  --ws-stage-text: var(--wa-ink);
+  --ws-stage-muted: var(--wa-muted);
+  --ws-stage-border: var(--wa-line);
+  --ws-stage-hover: var(--wa-hover);
+  --ws-radius-sm: var(--wa-radius-sm);
+  --ws-radius: var(--wa-radius-md);
+  --ws-radius-lg: var(--wa-radius-lg);
+  --ws-shadow-popover: var(--wa-shadow-md);
+  --ws-shadow-media: var(--wa-shadow-lg);
+  --ws-shadow-raised: var(--wa-shadow-sm);
+  --ws-ease: var(--wa-ease);
+}
+
+/* Optional dark palette, activated explicitly on html. No extra user flow. */
+:root.ws-arabic[data-wasla-theme="dark"] {
+  color-scheme: dark;
+  --wa-ivory: #24211C;
+  --wa-paper: #2F2A23;
+  --wa-ink: #F5F2EB;
+  --wa-muted: #D2C9B9;
+  --wa-faint: #C4BAA9;
+  --wa-bronze: #F2CC60;
+  --wa-line: #50473A;
+  --wa-line-strong: #887B65;
+  --wa-subtle: #383127;
+  --wa-hover: #453B2D;
+  --wa-gold-tint: #45391E;
+  --wa-success: #91C7A6;
+  --wa-success-tint: #293D31;
+  --wa-error: #F0A49A;
+  --wa-error-tint: #4C2E28;
+  --wa-processing: #D2C9B9;
+  --wa-shadow-color: rgb(15 12 8 / 24%);
+}
+
+html.ws-arabic { scroll-padding-block-start: 6rem; }
+.ws-arabic body { font-size: var(--wa-text-body); line-height: 1.75; text-align: start; }
+/* Retained English sections remain readable until their scheduled Arabic redesign. */
+.ws-arabic .ws-landing[lang="en"] { font-family: var(--wa-font-latin); }
+.ws-arabic .ws-agent-portrait, .ws-arabic .ws-access-story { background: var(--wa-subtle); }
+.ws-arabic :where(h1, h2, h3, h4, h5, h6) { font-family: var(--wa-font-heading); line-height: 1.35; text-wrap: balance; }
+.ws-arabic :where(*, *::before, *::after) { letter-spacing: normal !important; }
+.ws-arabic :where(p, li) { overflow-wrap: break-word; }
+.ws-arabic :where(bdi, [data-latin]) { font-family: var(--wa-font-latin); unicode-bidi: isolate; font-variant-numeric: lining-nums tabular-nums; }
+.ws-arabic :where(button, [role="button"], input:not([type="checkbox"], [type="radio"]), select) { min-block-size: 44px; }
+.ws-arabic :where(button, a, input, textarea, select, [tabindex]):focus-visible { outline: 3px solid var(--wa-bronze); outline-offset: 4px; }
+.ws-arabic :where(.ws-button-primary, .ws-landing-primary) {
+  background: var(--wa-gold) !important;
+  border-color: var(--wa-gold) !important;
+  color: var(--wa-ink-on-gold) !important;
+}
+@media (hover: hover) {
+.ws-arabic :where(.ws-button-primary, .ws-landing-primary):hover { background: var(--wa-gold-hover) !important; }}
+.ws-arabic [data-directional-icon] { transform: scaleX(-1); }
+.wa-container { inline-size: min(100% - 2 * var(--wa-space-6), 80rem); margin-inline: auto; }
+.wa-section { padding-block: var(--wa-space-24); }
+.wa-display { font-size: var(--wa-text-display); }
+.wa-heading { font-size: var(--wa-text-heading); }
+.wa-sr-only { position: absolute; inline-size: 1px; block-size: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 700px) { .wa-section { padding-block: var(--wa-space-16); } }
+@media (prefers-reduced-motion: reduce) {
+  .ws-arabic { scroll-behavior: auto; }
+  .ws-arabic *, .ws-arabic *::before, .ws-arabic *::after { animation: none !important; transition: none; scroll-behavior: auto !important; }
+}
