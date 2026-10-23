@@ -1,6 +1,7 @@
+import { sitePath } from "@/lib/site-path";
 /** Runs in the head, before hydration or the first body paint. Landing route only. */
 export const introBootstrap = `(function(){
-  if(location.pathname!=="/")return;
+  if(location.pathname!==${JSON.stringify(sitePath("/"))}&&location.pathname!==${JSON.stringify(sitePath("/").replace(/\/$/, ""))})return;
   var root=document.documentElement, motion=matchMedia("(prefers-reduced-motion: reduce)"), seen=false;
   try{seen=sessionStorage.getItem("wasla:arabic-intro:v1")==="seen"}catch(e){}
   if(seen||motion.matches||performance.now()>=3552)return;

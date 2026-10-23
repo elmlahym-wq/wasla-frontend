@@ -1,4 +1,6 @@
 "use client";
+
+import { sitePath } from "@/lib/site-path";
 import { useEffect, useRef, useState } from "react";
 type AgentPhase = "Scanning" | "Filtering" | "Tailoring" | "Preparing" | "Applying" | "Submitting" | "Tracking" | null;
 
@@ -12,8 +14,8 @@ export function agentAppearance(phase: AgentPhase, running: boolean, needsInput 
 }
 
 export const agentMedia = {
-  master: "/media/wasla-agent/agent-core-satin.webp",
-  avatar: "/media/wasla-agent/agent-core.svg",
+  master: sitePath("/media/wasla-agent/agent-core-satin.webp"),
+  avatar: sitePath("/media/wasla-agent/agent-core.svg"),
 };
 const focusRing = "M 103 68 H 153 Q 188 68 188 103 V 153 Q 188 188 153 188 H 103 Q 68 188 68 153 V 103 Q 68 68 103 68 Z M 117 99 H 139 Q 157 99 157 117 V 139 Q 157 157 139 157 H 117 Q 99 157 99 139 V 117 Q 99 99 117 99 Z";
 const focusSignals = ["M 128 20 V 119", "M 236 128 H 137", "M 128 236 V 137", "M 20 128 H 119"];

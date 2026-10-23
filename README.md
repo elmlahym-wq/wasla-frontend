@@ -68,3 +68,11 @@ See [architecture](docs/ARCHITECTURE.md) for rendering, stylesheet layering, and
 ## Source and licensing
 
 Prepared from the supplied Wasla Frontend v40 archive. Original visual assets and font license notices are retained. No open-source license has been assigned to the project source. Review asset rights before redistribution.
+
+## GitHub Pages
+
+Public frontend URL after Pages deployment: https://elmlahym-wq.github.io/wasla-frontend/
+
+The Pages workflow builds all six routes with `NEXT_PUBLIC_BASE_PATH=/wasla-frontend`, adjusts public font URLs, and deploys the static export. Enable **Settings → Pages → Source → GitHub Actions** once. Local/root hosting continues to work without the environment variable.
+
+The repository contains the marketing frontend only. Existing `/app` calls to action still open the separately hosted workspace demo; deploying this repository does not migrate that application.
